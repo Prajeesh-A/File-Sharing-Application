@@ -1,11 +1,10 @@
+# © 2023 [Prajeesh A]. All rights reserved.
+
 import streamlit as st
 import os
 import random
 import string
 import json
-
-# Set the maximum upload size
-st.set_option('server.maxUploadSize', 1024)
 
 # Set the title of the app
 st.markdown(
