@@ -23,7 +23,7 @@ st.markdown(
         text-align: center;
         text-decoration: none;
         display: inline-block;
-        font-size: 16px;
+        font-size: 16px;---
         margin: 4px 2px;
         cursor: pointer;
         border-radius: 5px;
@@ -115,4 +115,6 @@ with col2:
             with open(file_path, "rb") as f:
                 st.download_button(label="Download File", data=f, file_name=file_name, key="download_file_button")
         else:
-            st.error("Invalid code. Please try again.")
+            st.error("Invalid code. Please try again.") 
+
+st.write('copyright © 2023 [Prajeesh A]. All rights reserved.')
