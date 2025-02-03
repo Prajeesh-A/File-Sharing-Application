@@ -51,7 +51,12 @@ st.markdown(
     unsafe_allow_html=True
 )
 
-st.title("📁 File Sharing Application [Prajeesh A]")
+st.markdown(
+    """
+    <h1 style='text-align: center; color: #4CAF50;'>📁 File Sharing Application [Prajeesh A]</h1>
+    """,
+    unsafe_allow_html=True
+)
 
 # Ensure the uploads directory exists
 if not os.path.exists("uploads"):
