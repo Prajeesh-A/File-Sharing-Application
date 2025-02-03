@@ -7,7 +7,7 @@ import string
 import json
 
 # Set the title of the app
-st.title("📁 File Sharing Application")
+st.title("📁 File Sharing Application [Prajeesh A]")
 
 # Ensure the uploads directory exists
 if not os.path.exists("uploads"):
