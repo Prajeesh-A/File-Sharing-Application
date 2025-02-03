@@ -9,50 +9,6 @@ import json
 # Set the title of the app
 st.markdown(
     """
-    <style>
-    .main {
-        background-color: #f0f2f6;
-        padding: 20px;
-        border-radius: 10px;
-    }
-    .stButton>button {
-        background-color: #4CAF50;
-        color: white;
-        border: none;
-        padding: 10px 20px;
-        text-align: center;
-        text-decoration: none;
-        display: inline-block;
-        font-size: 16px;---
-        margin: 4px 2px;
-        cursor: pointer;
-        border-radius: 5px;
-    }
-    .stTextInput>div>div>input {
-        border: 2px solid #4CAF50;
-        border-radius: 5px;
-        padding: 10px;
-    }
-    .stFileUploader>div>div>button {
-        background-color: #4CAF50;
-        color: white;
-        border: none;
-        padding: 10px 20px;
-        text-align: center;
-        text-decoration: none;
-        display: inline-block;
-        font-size: 16px;
-        margin: 4px 2px;
-        cursor: pointer;
-        border-radius: 5px;
-    }
-    </style>
-    """,
-    unsafe_allow_html=True
-)
-
-st.markdown(
-    """
     <h1 style='text-align: center; color: #4CAF50;'>📁 File Sharing Application </h1>
     """,
     unsafe_allow_html=True
@@ -115,13 +71,4 @@ with col2:
             with open(file_path, "rb") as f:
                 st.download_button(label="Download File", data=f, file_name=file_name, key="download_file_button")
         else:
-            st.error("Invalid code. Please try again.") 
-
-st.markdown(
-    """
-    <div style='text-align: center; margin-top: 50px;'>
-        <p style='color: #4CAF50;'>© 2023 [Prajeesh A]. All rights reserved.</p>
-    </div>
-    """,
-    unsafe_allow_html=True
-)
+            st.error("Invalid code. Please try again.")
