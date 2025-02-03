@@ -48,3 +48,20 @@ with col1:
         # Save the updated mapping to the JSON file
         with open(mapping_file, "w") as f:
             json.dump(file_code_mapping, f)
+        
+        st.success(f"File uploaded successfully! Your code is: {code}")
+
+# File download section
+with col2:
+    st.header("Download File")
+    code_input = st.text_input("Enter the 4-digit code")
+    
+    if st.button("Download"):
+        if code_input in file_code_mapping:
+            file_name = file_code_mapping[code_input]
+            file_path = os.path.join("uploads", file_name)
+            
+            with open(file_path, "rb") as f:
+                st.download_button(label="Download File", data=f, file_name=file_name)
+        else:
+            st.error("Invalid code. Please try again.")
