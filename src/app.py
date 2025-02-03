@@ -117,4 +117,11 @@ with col2:
         else:
             st.error("Invalid code. Please try again.") 
 
-st.write('copyright © 2023 [Prajeesh A]. All rights reserved.')
+st.markdown(
+    """
+    <div style='text-align: center; margin-top: 50px;'>
+        <p style='color: #4CAF50;'>© 2023 [Prajeesh A]. All rights reserved.</p>
+    </div>
+    """,
+    unsafe_allow_html=True
+)
