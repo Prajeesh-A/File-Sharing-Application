@@ -29,7 +29,7 @@ col1, col2 = st.columns(2)
 # File upload section
 with col1:
     st.header("Upload File")
-    uploaded_file = st.file_uploader("Choose a file to upload", type=["txt", "pdf", "png", "jpg", "jpeg", "zip"])
+    uploaded_file = st.file_uploader("Choose a file to upload")
     
     if uploaded_file is not None:
         # Save the uploaded file to the local directory
