@@ -29,7 +29,7 @@ col1, col2 = st.columns(2)
 # File upload section
 with col1:
     st.header("Upload File")
-    uploaded_file = st.file_uploader("Choose a file to upload", type=["txt", "pdf", "png", "jpg", "jpeg"])
+    uploaded_file = st.file_uploader("Choose a file to upload", type=["txt", "pdf", "png", "jpg", "jpeg", "zip"])
     
     if uploaded_file is not None:
         # Save the uploaded file to the local directory
@@ -48,19 +48,3 @@ with col1:
         # Save the updated mapping to the JSON file
         with open(mapping_file, "w") as f:
             json.dump(file_code_mapping, f)
-        
-        st.success(f"File uploaded successfully! Your access code is: {code}")
-
-# File download section
-with col2:
-    st.header("Download File")
-    access_code = st.text_input("Enter the 4-digit access code to download a file")
-    
-    if st.button("Download File"):
-        if access_code in file_code_mapping:
-            file_name = file_code_mapping[access_code]
-            file_path = os.path.join("uploads", file_name)
-            with open(file_path, "rb") as f:
-                st.download_button("Download", f, file_name=file_name)
-        else:
-            st.warning("Invalid access code.")
