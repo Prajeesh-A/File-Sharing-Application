@@ -7,6 +7,50 @@ import string
 import json
 
 # Set the title of the app
+st.markdown(
+    """
+    <style>
+    .main {
+        background-color: #f0f2f6;
+        padding: 20px;
+        border-radius: 10px;
+    }
+    .stButton>button {
+        background-color: #4CAF50;
+        color: white;
+        border: none;
+        padding: 10px 20px;
+        text-align: center;
+        text-decoration: none;
+        display: inline-block;
+        font-size: 16px;
+        margin: 4px 2px;
+        cursor: pointer;
+        border-radius: 5px;
+    }
+    .stTextInput>div>div>input {
+        border: 2px solid #4CAF50;
+        border-radius: 5px;
+        padding: 10px;
+    }
+    .stFileUploader>div>div>button {
+        background-color: #4CAF50;
+        color: white;
+        border: none;
+        padding: 10px 20px;
+        text-align: center;
+        text-decoration: none;
+        display: inline-block;
+        font-size: 16px;
+        margin: 4px 2px;
+        cursor: pointer;
+        border-radius: 5px;
+    }
+    </style>
+    """,
+    unsafe_allow_html=True
+)
+
 st.title("📁 File Sharing Application [Prajeesh A]")
 
 # Ensure the uploads directory exists
