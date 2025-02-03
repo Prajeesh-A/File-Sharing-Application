@@ -53,7 +53,7 @@ st.markdown(
 
 st.markdown(
     """
-    <h1 style='text-align: center; color: #4CAF50;'>📁 File Sharing Application [Prajeesh A]</h1>
+    <h1 style='text-align: center; color: #4CAF50;'>📁 File Sharing Application </h1>
     """,
     unsafe_allow_html=True
 )
